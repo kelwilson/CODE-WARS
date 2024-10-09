@@ -15,3 +15,8 @@ function removeEveryOther(arr){
     // [1,2,3,4,5,6] -> [1,3,5]
     return arr.filter((ele, i, a) => a.splice(ele[i+1], 1))
   }
+
+  //Corrections: The best solution:
+  function removeEveryOther(arr) {
+    return arr.filter((_ele, i) => i % 2 === 0);
+}
