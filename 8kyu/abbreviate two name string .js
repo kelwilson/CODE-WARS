@@ -46,13 +46,10 @@ function initials(name) {
   //get the first letters of both elements of the array
   //convert the letters to upper-case
   // join the letters and return the first and secon letter with a period seperating them
-  let nameArr = name.split(' ')
-  let [first, last] = nameArr
+  let [first, last] = name.split(' ')
   let [f, ...rest1] = first;
   let [l, ...rest2] = last ;
-  let initial = [...f, ...l]
-  return initial.join('.').toUpperCase()
-  // console.log(initial)
+  return [...f, ...l].join('.').toUpperCase()
 }
 // Returns:
 console.log(initials('kelly besong')) //Examples -> K.B
