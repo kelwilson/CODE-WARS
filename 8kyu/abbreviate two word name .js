@@ -28,11 +28,37 @@ function abbrevName(name){
 
 
 //Second Solution:
-const abbrevName = name =>
-    name
+const abbrevName = name => {
+      name
       .split` `
       .map(part => part[0].toUpperCase())
       .join('.')
+}
+
+
+//Destructuring Solution:
+function initials(name) {
+  // PREP [Parameters, Returns, Examples, Psuedo-code]
+  // Parameters:
+  // will always take in a two word string name
+  // psuedo-code:
+  //split string into an array 
+  //get the first letters of both elements of the array
+  //convert the letters to upper-case
+  // join the letters and return the first and secon letter with a period seperating them
+  let nameArr = name.split(' ')
+  let [first, last] = nameArr
+  let [f, ...rest1] = first;
+  let [l, ...rest2] = last ;
+  let initial = [...f, ...l]
+  return initial.join('.').toUpperCase()
+  // console.log(initial)
+}
+// Returns:
+console.log(initials('kelly besong')) //Examples -> K.B
+console.log(initials('virginia enu')) //Examples -> V.E
+console.log(initials('douglas aria')) //Examples -> D.A
+
 
 
 
