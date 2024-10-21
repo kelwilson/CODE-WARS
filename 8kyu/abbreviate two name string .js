@@ -39,13 +39,16 @@ const abbrevName = name => {
 //Destructuring Solution:
 function initials(name) {
   // PREP [Parameters, Returns, Examples, Psuedo-code]
+
   // Parameters:
   // will always take in a two word string name
+
   // psuedo-code:
   //split string into an array 
   //get the first letters of both elements of the array
   //convert the letters to upper-case
   // join the letters and return the first and secon letter with a period seperating them
+  
   let [first, last] = name.split(' ')
   let [f, ...rest1] = first;
   let [l, ...rest2] = last ;
