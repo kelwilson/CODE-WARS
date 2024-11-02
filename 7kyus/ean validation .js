@@ -60,5 +60,3 @@ function validateEAN(eanCode) {
        // validateEAN("9783827317100") //-> Example = false
 
 
-  
-     
