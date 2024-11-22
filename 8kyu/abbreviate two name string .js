@@ -58,6 +58,7 @@ function initials(name) {
 console.log(initials('kelly besong')) //Examples -> K.B
 console.log(initials('virginia enu')) //Examples -> V.E
 console.log(initials('douglas aria')) //Examples -> D.A
+console.log(initials('ego georgian')) //Examples -> E.G
 
 
 
