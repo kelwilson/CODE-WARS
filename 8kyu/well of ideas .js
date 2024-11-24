@@ -44,3 +44,14 @@ function well(x){
   }
           // Returns :
              well(['bad', 'bad', 'bad']) // -> Example ='Fail!'
+
+  // Solution 2:
+  const well = (x) => {
+    const goodCount = x.filter((idea) => idea === 'good').length;
+
+    return goodCount < 1
+        ? 'Fail!'
+        : goodCount < 3
+        ? 'Publish!'
+        : 'I smell a series!';
+};
