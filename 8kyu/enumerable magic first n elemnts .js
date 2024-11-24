@@ -5,7 +5,6 @@
 
 function take(arr, n) {
     // Your code here
-    console.log(arr)
     // PREP [Parameters, Returns, Examples, Psuedo-codes]
           // Parameters :
               // takes in an array of numbers and a number
