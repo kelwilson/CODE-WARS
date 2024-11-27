@@ -31,3 +31,7 @@ function firstNonConsecutive (arr) {
   }
           // Returns :
               // firstNonConsecutive([1,2,3,4,6,7,8]) -> Exampple = 6
+
+// Solution 2:
+
+const firstNonConsecutive = arr => [...arr.filter( (n, i) => ! arr.includes( n - 1 ) ), null ][1];
