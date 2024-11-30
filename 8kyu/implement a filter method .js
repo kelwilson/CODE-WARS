@@ -16,3 +16,9 @@ Array.prototype.filter = function(fn){
     }
     return res;
   }
+
+
+// Solution 2:
+Array.prototype.filter = function (f) {
+    return this.reduce((res, x) => f(x) ? [...res, x] : res, []);
+  }
