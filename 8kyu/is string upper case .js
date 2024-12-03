@@ -17,6 +17,11 @@
 // Solution 1:
 String.prototype.isUpperCase = function() {
     // your code here
+    // PREP [Parameters, Returns, Examples, Psuedo-codes]
+        //  Parameters :
+            // create a method that checks for case sensitivity
+        //  Psuedo-codes :
+            // check if the string calling the method is equal to its upperCase value
       return this.toString() === this.toUpperCase()
         
   }
@@ -26,6 +31,11 @@ String.prototype.isUpperCase = function() {
 
 String.prototype.isUpperCase = function() {
     // your code here
+     // PREP [Parameters, Returns, Examples, Psuedo-codes]
+        //  Parameters :
+            // create a method that checks for case sensitivity
+        //  Psuedo-codes :
+            // check if the string calling the method is equal to its upperCase value
   //   const hasLetters = /[a-zA-Z]/.test(this);
       return this.valueOf() === this.toUpperCase()
         
