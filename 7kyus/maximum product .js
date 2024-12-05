@@ -32,3 +32,8 @@ function adjacentElementsProduct(array) {
   }
           // Returns :
               // adjacentElementsProduct([5, 8]) -> Example = 40
+            
+// Solution 2: 
+
+const adjacentElementsProduct = arr =>
+    arr.slice(1).reduce((acc, val, idx) => Math.max(acc, val * arr[idx]), -1/0);
