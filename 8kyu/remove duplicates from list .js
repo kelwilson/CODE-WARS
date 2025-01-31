@@ -25,4 +25,4 @@ function distinct(a) {
     
   }
         // Returns :
-            distinct([1,1,2]) //-> Examples = [1,2]
+           // distinct([1,1,2]) //-> Examples = [1,2]
