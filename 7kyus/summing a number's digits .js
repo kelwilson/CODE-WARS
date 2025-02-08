@@ -26,3 +26,11 @@ function sumDigits(number) {
 }
           // Return :
               // sumDigits(99) -> Example = 18
+
+// Solution 2:
+
+function sum(number) { 
+    return number < 10 ? number : number % 10 + sum(Math.floor(number / 10)) ; 
+}
+
+
