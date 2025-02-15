@@ -10,3 +10,13 @@
 function isIntArray(arr) {
     return Array.isArray(arr) && arr.every(function (x) { return Math.floor(x) === x });
   }
+
+  // Solution 2 :
+
+  const isIntArray = arr => {
+	try {
+  	return arr.every(Number.isInteger)
+  } catch(e) {
+    return false
+  }
+}
