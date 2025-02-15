@@ -33,4 +33,7 @@ function sum(number) {
     return number < 10 ? number : number % 10 + sum(Math.floor(number / 10)) ; 
 }
 
-
+// Solution 3:
+function sumDigits(n) {
+    return n ? Math.abs(n%10) + Math.abs(sumDigits(~~(n / 10))) : 0;
+  }
