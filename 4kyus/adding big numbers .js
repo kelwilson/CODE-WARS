@@ -26,3 +26,5 @@ function add (a, b) {
     }
     return res
   }
+
+  add("123", "321"); -> "444"
