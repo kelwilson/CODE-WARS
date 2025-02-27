@@ -24,3 +24,9 @@ function mouthSize(animal) {
           // Return :
               // mouthSize("toucan") -> Example = "wide"
               // mouthSize("alligator") -> Example = "small"
+
+// Solution 2:
+
+function mouthSize(animal) {
+    return animal.toLowerCase() == 'alligator' ? 'small' : 'wide';
+  }
