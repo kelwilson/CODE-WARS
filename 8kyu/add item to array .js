@@ -11,4 +11,9 @@
 // Solution :
 
 // add the value "codewars" to the already defined websites array
+
 websites.unshift("codewars")
+
+// Solution 2:
+
+websites.length=1; websites.fill("codewars"); 
