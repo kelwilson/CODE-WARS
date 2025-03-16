@@ -30,3 +30,9 @@ function litres(time) {
   }
         // Return :
            //  litres(1.4) -> Example = 0
+
+
+    // Solution 2:
+    
+    litres = t => ~~(t / 2);
+          
