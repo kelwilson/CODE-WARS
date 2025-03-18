@@ -33,3 +33,18 @@ const vowels = /^[aeiou]$/i;
 }
         // Returns :
             // vowelOne( "vowelOne" ) -> Exapmle = "01010101"
+
+
+//  Solution 2:
+
+function vowelOne(s) {
+    const vowels = ['a', 'e', 'i', 'o', 'u']; // Define vowel list
+    return s
+        .toLowerCase()
+        .split('')
+        .map(char => vowels.includes(char) ? 1 : 0)
+        .join('');
+}
+
+// Example usage:
+console.log(vowelOne("vowelOne")); // "01010101"
