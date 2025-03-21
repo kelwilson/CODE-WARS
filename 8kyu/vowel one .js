@@ -29,7 +29,12 @@ const vowels = /^[aeiou]$/i;
 
     const words = s.toLowerCase().split('')
     return words.map(word => word.match(vowels) ? 1 : 0).join('')
-   
+
+    //using array.from below instead of split 
+
+    // return Array.from(s, char => vowels.has(char) ? 1 : 0).join('');
+
+
 }
         // Returns :
             // vowelOne( "vowelOne" ) -> Exapmle = "01010101"
@@ -47,4 +52,30 @@ function vowelOne(s) {
 }
 
 // Example usage:
-console.log(vowelOne("vowelOne")); // "01010101"
+// console.log(vowelOne("vowelOne")); // "01010101"
+
+
+function vowelOneRegex(s) {
+    const vowels = /^[aeiou]$/i;
+    return s.toLowerCase().split('').map(char => vowels.test(char) ? 1 : 0).join('');
+}
+
+function vowelOneSet(s) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    return s.toLowerCase().split('').map(char => vowels.has(char) ? 1 : 0).join('');
+}
+
+const testString = "abcdefghijklmnopqrstuvwxyz".repeat(10000); // Large test case
+
+// Measure Regex Performance
+const startRegex = performance.now();
+vowelOneRegex(testString);
+const endRegex = performance.now();
+console.log(`Regex method took: ${(endRegex - startRegex).toFixed(4)} ms`);
+
+// Measure Set Lookup Performance
+const startSet = performance.now();
+vowelOneSet(testString);
+const endSet = performance.now();
+console.log(`Set method took: ${(endSet - startSet).toFixed(4)} ms`);
+
