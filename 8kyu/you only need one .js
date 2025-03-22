@@ -25,3 +25,8 @@ function check(a, x) {
   }
             // Return :
                 // check([66, 101], 66) -> Example = true
+
+
+// Solution 2:
+
+const check = (a,x)=>a.some(v=>v==x)
