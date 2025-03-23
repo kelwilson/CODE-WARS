@@ -46,3 +46,11 @@ function nicknameGenerator(name){
             // Returns :
                 // nicknameGenerator("Jimmy") -> Example = "Jim"
                 // nicknameGenerator("Sam") -> Example = "Error: Name too short"
+
+
+// Solution 2:
+
+function nicknameGenerator(name){
+    return name.length<4?"Error: Name too short":name.match(/^\w{2}([auoie]\w|[^auoie])/)[0];
+  }
+  
