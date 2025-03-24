@@ -54,3 +54,10 @@ function nicknameGenerator(name){
     return name.length<4?"Error: Name too short":name.match(/^\w{2}([auoie]\w|[^auoie])/)[0];
   }
   
+// Solution 3:
+
+  const nicknameGenerator = name => {
+    return name.length < 4
+      ? 'Error: Name too short'
+      : name.slice(0, 'aeiou'.includes(name[2]) ? 4 : 3)
+  }
