@@ -32,3 +32,10 @@ function sixToast(num) {
   }
             // Returns :
                 // sixToast(17) -> Example = 11
+
+
+// Solution 2:
+
+function sixToast(num) {
+    return Math.abs(num-6)
+  }
