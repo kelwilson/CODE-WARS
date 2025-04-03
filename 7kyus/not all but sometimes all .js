@@ -24,3 +24,9 @@ function remove(str, what) {
     return result.join("");
   }
 
+//   Solution 2:
+
+function remove(str, what) {
+    for(var key in what) for(i=0; i< what[key]; i++) str = str.replace(key, '');
+    return str;
+  }
