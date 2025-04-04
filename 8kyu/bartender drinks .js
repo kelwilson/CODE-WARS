@@ -54,3 +54,23 @@ function getDrinkByProfession(param){
 }
         // Return : 
             // getDrinkByProfession("jabrOni") -> Example : "Patron Tequila"
+
+
+// Solution 2:
+
+function getDrinkByProfession(param){
+    let map = new Map([
+            ["jabroni", "Patron Tequila"],
+            ["school counselor", "Anything with Alcohol"],
+            ["programmer", "Hipster Craft Beer"],
+            ["bike gang member", "Moonshine"],
+            ["politician", "Your tax dollars"],
+            ["rapper", "Cristal"]
+            ]);
+        
+     let normal = param.toLowerCase();
+     return map.has(normal) ? map.get(normal) : "Beer";
+  }
+
+//   Solution 3:
+
