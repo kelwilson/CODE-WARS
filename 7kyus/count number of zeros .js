@@ -31,3 +31,19 @@ function countZeros(n) {
   }
             // Return :
                 // countZeros(200) -> Example = 31
+
+
+// Solution 2:
+
+function countZeros(n) {
+    let count=0;
+    for (let i = 1; i <= n; i++) {
+      let strNum = i.toString();
+      for (let char of strNum) {
+        if (char === '0') {
+          count++;
+        }
+      }
+    }
+    return count;
+  }
