@@ -13,11 +13,11 @@
 
 // Solution :
 function firstNonConsecutive (arr) {
-    // PREP [Parameters, Returns, Examples, Psuedo-codes]
+    // PREP [Parameters, Returns, Examples, Pseudo-codes]
           // Parameters :
               // takes in an array of numbers
-              // should return null if they are conssecutive numbers or the first non consecutive number
-          // Psuedo-codes :
+              // should return null if they are consecutive numbers or the first non consecutive number
+          // Pseudo-codes :
               // loop through array 
               // if num[i + 1] - num[i] == 1 return null
               // if num[i + 1] - num[i] != 1 return num[i + 1]
@@ -30,8 +30,17 @@ function firstNonConsecutive (arr) {
   
   }
           // Returns :
-              // firstNonConsecutive([1,2,3,4,6,7,8]) -> Exampple = 6
+              // firstNonConsecutive([1,2,3,4,6,7,8]) -> Example = 6
 
 // Solution 2:
 
 const firstNonConsecutive = arr => [...arr.filter( (n, i) => ! arr.includes( n - 1 ) ), null ][1];
+
+// Solution 3:
+
+function firstNonConsecutive (arr) {
+  if(arr.length < 2) return null;
+
+  return arr.find((num, i) => i < arr.length - 1 && arr[i + 1] - num  > 1) || null;
+}
+
