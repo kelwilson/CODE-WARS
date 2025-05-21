@@ -44,3 +44,6 @@ function firstNonConsecutive (arr) {
   return arr.find((num, i) => i < arr.length - 1 && arr[i + 1] - num  > 1) || null;
 }
 
+OR 
+
+const firstNonConsecutive = arr => arr.find((n,i)=> i && n - arr[i - 1] != 1) ?? null;
