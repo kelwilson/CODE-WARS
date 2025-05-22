@@ -32,12 +32,3 @@ function mergeArrays(arr1, arr2) {
   }
         // Returns :
             // mergeArrays([1,3,5,7,9], [10,8,6,4,2]) -> Example = [1,2,3,4,5,6,7,8,9,10]
-
-            OR
-
-const mergeArrays = (arr1, arr2) => {
-      const mergeArr = [...arr1, ...arr2]
-    if(mergeArr.length === 0) return []
-
-    return [...new Set(mergeArr)].sort((a,b) => a - b)    
-}
