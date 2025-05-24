@@ -19,3 +19,6 @@ function findAverage(array) {
   }
         // Returns :
             findAverage([1,2,3,4]) // -> Example = 2.5
+
+// Solution 2 :
+const findAverage = array => array.reduce((acc, cur) => acc + cur, 0) / array.length || 0;
